@@ -1,0 +1,304 @@
+<div class="indexpage">
+  <section id="main">
+    <div class="container">
+      <div class="col-md-6 col-xs-12 mt-5" id="main-text">
+        <h1 class="upper">Межкомнатные <br> двери</h1>
+        <p class="big">Доставка и замер в точках  по Казахстану <br>и России.</p>
+        <br>
+        <!-- <button class="btn btn-primary big">ПОЗВОНИТЬ</button> -->
+      </div>
+      <div id="door-container" class="d-none d-lg-block">
+        <img [@sliderState]="doorState" src="assets/images/door_shadow.png" alt="shadow" id="door-shadow">
+        <img [@sliderState]="doorState" [src]="doors[activeDoor].src" class="doorActiveHere" id="door-image">
+        <div id="door-information">
+          <div [innerHtml]="doors[activeDoor].information | bindHtml"></div>
+          <div class="underline"></div>
+          <div id="door-left" class="square" (click)="onDoorPressed(-1)">
+            <i class="fa fa-angle-left"></i>
+          </div>
+          <div id="door-right" class="square" (click)="onDoorPressed(1)">
+            <i class="fa fa-angle-right"></i>
+          </div>
+          <div id="door-number">
+            <span ><b>{{ activeDoor + 1 }}</b></span> / <span> {{ doors.length }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="container">
+      <div class="col-md-10 px-4 mx-auto">
+        <div class="row box px-0">
+          <div class="col-md-7 clearfix">
+            <div style="background-image: url('assets/images/door1.jpg')" class="image-history image-history-1 float-left image-container"></div>
+            <div style="background-image: url('assets/images/door2.jpg')" class="image-history image-history-2 float-left image-container"></div>
+          </div>
+          <div class="col-md-5 my-auto">
+            <h2>О компании</h2>
+            <p class="cursive grey indent">Мы предлагаем не только двери ...</p>
+            <div class="gap"></div>
+            <p class="gray mb-5 storyTextHere" style="">Вся продукция «Profil Doors» изготавливается с учетом трендов в дизайне, безопасных и надежных материалов. Мы предлагаем оригинальные двери для тех, кто ценит надежность и красоту, что подчеркивает индивидуальность дизайна интерьера.Наша компания старается сделать весь процесс покупки и установки дверей максимально проще и приятнее для вас, например, оплата товаров банковской картой или в рассрочку без переплат.</p>
+          </div>
+          <a href="#">
+            <img src="assets/images/right-arrow.png" alt="перейти" class="box-arrow">
+          </a>
+        </div>
+      </div>
+      <p class="col-md-8 col-10 mx-auto my-4 text-center grey">Вы задаётесь вопросом “почему мне стоит выбрать именно ваши двери?” Наш ответ прост! <br>“Вся продукция Profil Doors делается по принципу лучшего соотношения цены и качества. Это позволяет ВАМ получить продуманный дизайн, идеально вписывающийся в любое помещение. "</p>
+    </div>
+  </section>
+
+  <section id="icons">
+    <div class="col-md-6 mx-auto text-center">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 mb-5 mb-md-1">
+          <div class="icon-container">
+            <img  src="assets/images/truck.png" alt="Сервис" height="23px">
+          </div>
+          <br><div class="gap"></div><div class="gap"></div>
+          <h4>Сервис</h4>
+          <p class="gray">Выполняем заказы в нестандартных размерах</p>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-5 mb-md-1">
+          <div class="icon-container">
+            <img  src="assets/images/like.png" alt="Качество" height="29px">
+          </div>
+          <br><div class="gap"></div><div class="gap"></div>
+          <h4>Качество</h4>
+          <p class="gray">Годовая гарантия. Срок службы двери – 20 лет</p>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-5 mb-md-1">
+          <div class="icon-container">
+            <img  src="assets/images/money.png" alt="Кредит" height="29px">
+          </div>
+          <br><div class="gap"></div><div class="gap"></div>
+          <h4>Кредит</h4>
+          <p class="gray">Оплата товаров банковской картой или в рассрочку без переплат</p>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-5 mb-md-1">
+          <div class="icon-container">
+            <img  src="assets/images/speech-bubble.png" alt="Престиж" height="28px">
+          </div>
+          <br><div class="gap"></div><div class="gap"></div>
+          <h4>Престиж</h4>
+          <p class="gray">Статус и комфорт</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="container">
+      <p class="cursive text-center" style="font-size: 14px">Уникальность и Актуальность</p>
+      <h3 class="upper text-center">Наши двери</h3>
+      <p class="text-center col-md-8 mx-auto">Межкомнатные двери «Profil Doors» отличаются приятным внешним видом, надежностью и декоративной отделкой. В нашем каталоге вы можете подобрать стильный всевозможный декор дверных конструкций, соответствующий бюджету и вашим предпочтениям.</p>
+      <div></div><br>
+      <div class="row justify-content-around">
+        <div class="door-container text-center">
+          <div class="door-image">
+            <img src="http://www.profildoors.ru/upload/iblock/367/1452869426_825340149.jpg">
+          </div>
+          <div class="gap"></div><div class="gap"></div><div class="gap"></div>
+          <h5>Серия U</h5>
+          <div class="gap"></div><div class="gap"></div>
+          <a href="#"><button class="btn btn-primary small">Подробнее</button></a>
+          <br><br>
+        </div>
+        <div class="door-container text-center">
+          <div class="door-image">
+            <img src="http://www.profildoors.ru/upload/iblock/3a7/76l_wg.png">
+          </div>
+          <div class="gap"></div><div class="gap"></div><div class="gap"></div>
+          <h5>Серия L</h5>
+          <div class="gap"></div><div class="gap"></div>
+          <a href="#"><button class="btn btn-primary small">Подробнее</button></a>
+          <br><br>
+        </div>
+        <div class="door-container text-center">
+          <div class="door-image">
+            <img src="http://www.profildoors.ru/upload/iblock/b96/1452880895_1323897514.jpg">
+          </div>
+          <div class="gap"></div><div class="gap"></div><div class="gap"></div>
+          <h5>Серия X</h5>
+          <div class="gap"></div><div class="gap"></div>
+          <a href="#"><button class="btn btn-primary small">Подробнее</button></a>
+          <br><br>
+        </div>
+        <div class="door-container text-center">
+          <div class="door-image">
+            <img src="http://www.profildoors.ru/upload/iblock/ee0/1452960604_1372854516.jpg">
+          </div>
+          <div class="gap"></div><div class="gap"></div><div class="gap"></div>
+          <h5>Серия Z</h5>
+          <div class="gap"></div><div class="gap"></div>
+          <a href="#"><button class="btn btn-primary small">Подробнее</button></a>
+          <br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dop-tovary">
+    <div class="container">
+      <div class="col-md-10 px-4 pb-5 mx-auto">
+        <div class="row box px-0">
+          <div class="col-12">
+            <div class="row text-center">
+              <div class="col-md-8 mx-auto">
+                <br>
+                <p class="cursive grey mb-1">У нас вы найдете не только двери…</p>
+                <h2 class="mt-0 mb-2">Дополнительные товары</h2>
+                <p class="gray">Широкий ассортимент дверных ручек, замков и петель. Оригинальность и тонкость фурнитуры не оставит вас равнодушными.</p>
+              </div>
+            </div>
+            <div class="gap"></div><div class="gap"></div><div class="gap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workers">
+    <div class="container">
+      <!--  <div class="col-md-10 mx-auto">
+           <div class="row px-2 worker-slider-container worker-slider">
+               <div class="col-md-8 float-right order-1 order-md-2">
+                   <div class="image-container float-right workerImageHere" style="width: 478px; background-image: url(assets/director.jpg);"></div>
+               </div>
+               <div class="col-md-4 my-auto float-left order-2 order-md-1 workerInformationHere">
+                   <h2>Байжуманов Ильяс</h2>
+                   <p class="cursive gray">Директор</p>
+                   <p class="gray">Рыбаки не думают о вчерашних неудачах, они думают о сегодняшних возможностях!</p>
+
+               </div>
+           </div>
+           <div class="row mx-auto circles justify-content-center workerCircles">
+
+           </div>
+       </div> -->
+      <!-- <div class="arrows">
+          <i class="fa fa-angle-left float-left workerArrowLeft"></i>
+          <i class="fa fa-angle-right float-right workerArrowRight"></i>
+      </div> -->
+    </div>
+  </section>
+
+  <section id="information" class="py-5 my-1">
+    <div class="container my-5">
+      <div class="col-md-10 px-0 px-sm-2 mx-auto">
+        <div class="row px-4">
+          <div class="col-md-5 white">
+            <div class="row">
+              <div class="map-container px-0 col-12">
+                <!--<iframe frameborder="no" style="border: 1px solid #a3a3a3; box-sizing: border-box; margin: 0;" width="100%" height="300" src="http://widgets.2gis.com/widget?type=firmsonmap&amp;options=%7B%22pos%22%3A%7B%22lat%22%3A43.236167694554204%2C%22lon%22%3A76.84642553329469%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22almaty%22%7D%2C%22org%22%3A%229429940000785575%22%7D"></iframe>-->
+                <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+                <div id="map" style="width:100%; height: 190px; border:0; background: #444"></div>
+                <!--                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.677469400906!2d76.84312341537633!3d43.23722147913783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369c12e62874d%3A0x74a5c96297264d8a!2z0KLQtdGF0L3QvtC00L7QvCDQkNGA0LzQsNC00LA!5e0!3m2!1sru!2s!4v1507977237004" width="100%" height="190" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+              </div>
+              <div class="contacts text-center pt-3 pb-2 px-0 col-12">
+                <h4>Контакты</h4>
+                <p class="cursive mb-4">Мы всегда на связи</p>
+                <div class="row justify-content-center p-3">
+                  <span onclick="switchMapTo('Almaty')" class="btn btn-primary mx-2 my-2 d-block small float-left">Алматы</span>
+                  <br>
+                  <span onclick="switchMapTo('Astana')" class="btn btn-primary mx-2 my-2 d-block small float-left">Астана</span>
+                  <span onclick="switchMapTo('Karaganda')" class="btn btn-primary mx-2 my-2 d-block small float-left">Караганда</span>
+                  <span onclick="switchMapTo('Shymkent')" class="btn btn-primary mx-2 my-2 d-block small float-left">Шымкент</span>
+                </div>
+              </div>
+              <div class="contacts text-center contacts-phone px-0 col-12">
+                <p class="smaller py-2 m-0 bordered border-bottom-0">
+                  <a href="tel: +77016060070">+7 (701) 606 00 70</a>
+                </p>
+                <p class="smaller py-2 m-0 bordered">
+                  <a href="tel: +77076060070">+7 (707) 606 00 70</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 bg-white">
+            <div class="mt-5">
+              <div class="col-10 mx-auto text-center">
+                <p class="cursive mb-1 grey">Заинтересованы? У вас есть вопросы?</p>
+                <h2 class="mb-3">Оформите заявку</h2>
+                <p class="gray">Профессиональные консультанты будут рады помочь Вам в выборе нужной модели и ответят на любые интересующие Вас вопросы.</p>
+              </div>
+              <form action="/call_mes" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="6jaFjAzR2rgsxxt8os0cxUqbWVyczY78EGWCiNH+ACLwHIm6jC8pSK+BiHTLq45YmG9cFfK7U44lSsHuASX0GQ==">
+
+                <div class="inner contact">
+                  <div class="contact-form">
+                    <input placeholder="Введите Фамилие Имя" id="call_me_name" class="input-group" type="text" name="call_me[name]">
+                    <input placeholder="Введите Ваш телефон" id="call_me_phone" class="input-group" type="text" name="call_me[phone]">
+                    <select class="input-group" name="call_me[location]">
+                      <option value="">Выберите город</option>
+                      <option value="1">Алматы</option>
+                      <option value="2">Астана</option>
+                      <option value="3">Шымкент</option>
+                      <option value="4">Караганда</option>
+                      <option value="5">Челябинск</option>
+                      <option value="6">Актобе</option>
+                      <option value="7">Тараз</option>
+                      <option value="8">Павлодар</option>
+                      <option value="9">Усть-Каменогорск</option>
+                      <option value="10">Семей</option>
+                      <option value="11">Костанай</option>
+                      <option value="12">Уральск</option>
+                      <option value="13">Атырау</option>
+                      <option value="14">Кызылорда</option>
+                      <option value="15">Петропавловск</option>
+                      <option value="16">Актау</option>
+                      <option value="17">Темиртау</option>
+                      <option value="18">Туркестан</option>
+                      <option value="19">Кокшетау</option>
+                      <option value="20">Талдыкорган</option>
+                      <option value="21">Экибастуз</option>
+                      <option value="22">Рудный</option>
+                    </select>
+                    <!-- Bottom Submit -->
+                    <div class="relative fullwidth col-xs-12">
+                      <!-- Send Button -->
+                      <input type="submit" name="commit" value="Отправить" class="btn btn-primary mx-auto my-2 d-block long mw-100" id="submit" data-disable-with="Отправить">
+                    </div><!-- End Bottom Submit -->
+                    <!-- Clear -->
+                    <div class="clear"></div>
+                    <!-- Your Mail Message -->
+                    <div class="mail-message-area">
+                      <!-- Message -->
+                      <div class="alert gray-bg mail-message not-visible-message">
+                      </div>
+                    </div>
+                  </div><!-- End Contact Form Area -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mx-auto text-center">
+          <h2>Наши клиенты</h2>
+          <p class="cursive grey">Счастливые люди</p>
+          <p class="gray" >Мы благодарим каждого, кто переступил наш порог, за доверие, полезный опыт и сотрудничество.</p>
+        </div>
+      </div>
+      <div class="row logos justify-content-around text-center">
+        <div class="h-148 col-md-3 pb-5" style="line-height: 148px;">
+          <img src="assets/images/airastana.png" alt="Air Astana" class="w-75">
+        </div>
+        <div class="h-148 col-md-3 pb-5" style="line-height: 148px;">
+          <img src="assets/images/expo.png" alt="Expo 2017" class="w-75">
+        </div>
+        <div class="h-148 col-md-3 pb-5" style="line-height: 148px;">
+          <img src="assets/images/astana.png" alt="Банк Астаны" class="w-75">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

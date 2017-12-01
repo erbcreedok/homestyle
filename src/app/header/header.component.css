@@ -1,0 +1,110 @@
+header {
+    height: 31px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: 150ms 150ms;
+}
+header.hidden {
+    top: -100px;
+}
+nav {
+    font-size: 12px;
+    background: black;
+}
+nav .navbar-toggler {
+    border: none;
+    background: #b88d5a;
+    border-radius: 0px;
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    cursor: pointer;
+}
+nav .navbar-toggler:hover {
+    background: #966b38;
+}
+nav a.nav-link {
+    color: #fff;
+    position: relative;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.62);
+}
+nav a.nav-link:hover {
+    color: #fafaef;
+}
+nav a.nav-link.active {
+    color: #ffb44f;
+}
+nav a.nav-link.active:before,
+nav a.nav-link:hover:before {
+    max-width: 100%;
+}
+#navbar-brand img {
+    margin-top: 15px;
+}
+#top-header{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 0;
+    top: 0;
+    height: 31px;
+}
+#top-header.hidden {
+    top: -100px;
+}
+#top-header .text-right {
+    cursor: default;
+}
+#top-header p {
+    font-size: 10px;
+    display: inline-block;
+    margin: 0px 10px;
+}
+#top-header p i:before {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+#top-header p i:hover:before {
+    color: #fff;
+}
+#top-header a {
+    color: #fff;
+}
+#top-header .vertical-line {
+    vertical-align: top;
+    margin-top: -8px;
+    width: 1px;
+    height: 31px;
+    border-left: 1px solid #555;
+    display: inline-block;
+}
+@media (min-width: 992px) {
+    header {
+        position: relative;
+    }
+    nav {
+        background-color: transparent;
+        padding: 0 !important;
+    }
+    nav .navbar-nav {
+        margin-top: -5px;
+    }
+    nav a.nav-link.active {
+        color: #fff;
+    }
+    nav a.nav-link:before {
+        height: 3px;
+        max-width: 0;
+        background-color: #ffb44f;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        margin: auto;
+        -webkit-transition: 200ms;
+        -moz-transition: 200ms;
+        -ms-transition: 200ms;
+        -o-transition: 200ms;
+        transition: 200ms;
+    }
+}

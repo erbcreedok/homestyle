@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="242px" height="360px" viewBox="0 0 242 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>medal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="medal" fill-rule="nonzero">
+            <polygon id="Shape" fill="#CF9D6B" points="185.258 359.262 121.062 293.883 56.865 359.262 56.865 180.455 185.258 180.455"></polygon>
+            <circle id="Oval" fill="#FBD97F" cx="121.062" cy="121.378" r="120.911"></circle>
+            <circle id="Oval" fill="#F8C862" cx="121.062" cy="121.378" r="96.492"></circle>
+            <polygon id="Shape" fill="#FFFFFF" points="121.062 56 141.148 96.96 186.046 103.655 153.751 135.163 161.234 180.062 121.062 158.794 80.889 180.062 88.372 135.163 56.077 103.655 100.975 96.96"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,42 @@
+footer {
+    background-color: #000;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    color: #ddd;
+}
+footer form {
+    margin: 15px 0px;
+}
+footer input {
+    width: 200px;
+    height: 28px;
+    background-color: #1b1b1b;
+    margin: 0;
+    padding: 0px 5px;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+footer input:placeholder {
+    color: #fefefe;
+}
+footer button.btn.btn-primary {
+    width: 80px;
+    height: 28px;
+    padding: 0;
+    line-height: 28px;
+    margin: -1px 0px 0px -3px;
+}
+@media (min-width: 768px) {
+    footer input {
+        width: 189px;
+    }
+}
+@media (min-width: 992px) {
+    footer input {
+        width: 250px;
+    }
+}

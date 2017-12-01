@@ -1,0 +1,346 @@
+.indexpage #clients .container .row .h-310 img{
+    width: 300px;
+    margin: 0px 30px;
+}
+
+.indexpage #main {
+    background-image: url('/assets/images/lowbg.jpg');
+    background-size: cover;
+    overflow: hidden;
+    height: 110vh;
+    -webkit-animation: background-left 1200ms 1000ms ease-in;
+    -moz-animation: background-left 1200ms 1000ms ease-in;
+    -ms-animation: background-left 1200ms 1000ms ease-in;
+    -o-animation: background-left 1200ms 1000ms ease-in;
+    animation-fill-mode: both;
+}
+.indexpage #main-text {
+    padding: 12rem 0 5rem;
+    color: #fff;
+}
+.indexpage #door-image {
+    width: 190px;
+    position: absolute;
+}
+.indexpage #door-shadow {
+    width: 361px;
+    position: absolute;
+    top: -50px;
+    left: -80px;
+}
+.indexpage #door-information {
+    position: absolute;
+    width: 198px;
+    left: -198px;
+    top: 70px;
+    color: #fff;
+    font-size: 21px;
+}
+.indexpage #door-information p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.indexpage #door-information .underline {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.indexpage #door-information .square {
+    border: 2px solid #fff;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms;
+    color: #fff;
+}
+.indexpage #door-information .square:hover {
+    color: #000;
+    background-color: #fff;
+}
+.indexpage #door-information .square i {
+    display: inline-block;
+    margin-top: -5px;
+}
+.indexpage #door-information .door-type {
+    color: #f7ddad;
+}
+.indexpage #door-number {
+    margin-left: 12px;
+    float: left;
+    font-weight: normal;
+    line-height: 24px;
+}
+.indexpage #history {
+    margin-top: -100px;
+    z-index: 10;
+}
+.indexpage #history .image-history {
+    height: 270px;
+}
+.indexpage #history .image-history-1 {
+    display: none;
+}
+.indexpage #history .image-history-2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.indexpage #icons {
+    padding: 60px 0px;
+}
+.indexpage #icons img {
+    vertical-align: bottom;
+}
+.indexpage #icons .icon-container {
+    display: inline-block;
+    height: 30px;
+    vertical-align: bottom;
+}
+.indexpage #catalog {
+    background-image: url("/assets/images/texture.jpg");
+    color: #fff;
+    padding: 60px 0px;
+    -webkit-box-shadow: inset 0 -60px 30px -30px #fff;
+    -moz-box-shadow: inset 0 -60px 30px -30px #fff;
+    box-shadow: inset 0 -60px 30px -30px #fff;
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+.indexpage #catalog .door-container {
+    cursor: pointer;
+    padding: 0px 10px;
+    height: 350px;
+    width: 135px;
+    margin-bottom: 30px;
+}
+.indexpage #catalog .door-container .door-image {
+    height: 274px;
+    width: 115px;
+    overflow: hidden;
+    vertical-align: top;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    -webkit-transition: 170ms;
+    -moz-transition: 170ms;
+    -ms-transition: 170ms;
+    -o-transition: 170ms;
+    transition: 170ms;
+}
+.indexpage #catalog .door-container .door-image img {
+    vertical-align: bottom;
+    width: 100%;
+}
+.indexpage #catalog .door-container:hover .door-image {
+    height: 285px;
+    width: 120px;
+    margin-top: -11px;
+    margin-left: -2.5px;
+    margin-bottom: 0px;
+    -webkit-box-shadow: 0px 2px 15px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 15px 8px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 15px 8px rgba(0,0,0,0.2);
+}
+.indexpage #catalog:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 60px;
+}
+.indexpage #dop-tovary {
+    margin-top: -60px;
+}
+.indexpage #dop-tovary .item {
+    padding: 0.5rem;
+}
+.indexpage #dop-tovary .item .image-container {
+    width: 25%;
+    padding-bottom: 16%;
+    -webkit-box-shadow: inset 0 0 9px 1px rgba(0,0,0,0.07);
+    -moz-box-shadow: inset 0 0 9px 1px rgba(0,0,0,0.07);
+    box-shadow: inset 0 0 9px 1px rgba(0,0,0,0.07);
+}
+.indexpage #dop-tovary .item .item-info {
+    width: 70%;
+    margin-left: 0.5rem;
+}
+.indexpage #dop-tovary .btn.small {
+    width: 32%;
+}
+.indexpage #workers {
+    margin-top: 130px;
+}
+.indexpage #workers .container {
+    position: relative;
+}
+.indexpage #workers .arrows {
+    position: absolute;
+    top: 0;
+    bottom: 60px;
+    right: 15px;
+    left: 15px;
+    height: 40px;
+    margin: auto;
+    font-size: 40px;
+}
+.indexpage #workers .arrows i {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.indexpage #workers .arrows i:hover {
+    opacity: 0.8;
+}
+.indexpage #workers .image-container {
+    max-width: 100%;
+    background-size: 130%;
+    background-position: 50% 45%;
+    padding-top: 60%;
+    margin-bottom: 10px;
+}
+.indexpage .circles {
+    color: #e1e1e1;
+    margin: 40px 0px;
+}
+.indexpage .circles i {
+    margin: 0px 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.indexpage .circles i:hover {
+    color: #bfbfbf;
+}
+.indexpage .circles i.active {
+    color: #b88d5a;
+}
+.indexpage #information {
+    background-image: url("/assets/images/bgblur.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-box-shadow: inset 0 -60px 30px -30px #fff, inset 0 60px 30px -30px #fff;
+    -moz-box-shadow: inset 0 -60px 30px -30px #fff, inset 0 60px 30px -30px #fff;
+    box-shadow: inset 0 -60px 30px -30px #fff, inset 0 60px 30px -30px #fff;
+}
+.indexpage #information .map-container {
+    margin-bottom: -5px;
+}
+.indexpage #information .contacts {
+    overflow: auto;
+    background-color: #676666;
+}
+.indexpage #information .contacts p.bordered {
+    border: 2px solid #505050;
+}
+.indexpage #information .contacts p.bordered a {
+    color: #fff;
+}
+.indexpage #information .contacts p.bordered a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+@media (min-width: 319px) {
+    .row.logos .h-310 img {
+        width: 250px;
+    }
+}
+@media (min-width: 576px) {
+    .indexpage #history .image-history-1 {
+        width: 170px;
+        margin-right: 10px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .indexpage #history .image-history-2 {
+        width: 280px;
+    }
+    .indexpage #dop-tovary .btn.small {
+        width: 110px;
+    }
+    .indexpage #dop-tovary .item .image-container {
+        width: 60px;
+        padding-bottom: 40px;
+    }
+    .indexpage #dop-tovary .item .item-info {
+        width: 150px;
+    }
+}
+@media (min-width: 768px) {
+    .indexpage #history .image-history-1 {
+        width: 110px;
+        margin-bottom: 0px;
+    }
+    .indexpage #history .image-history-2 {
+        width: 170px;
+        margin-bottom: 0px;
+    }
+    .indexpage #dop-tovary .item .image-container {
+        width: 80px;
+        padding-bottom: 52px;
+    }
+    .indexpage #workers .image-container {
+        padding: 0px;
+        height: 282px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (min-width: 992px) {
+    .indexpage #main {
+        height: 725px;
+        background-image: url("/assets/images/bg.jpg");
+        background-size: auto 725px;
+        background-position-x: center;
+        position: relative;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+    .indexpage #main .container {
+        overflow: visible;
+    }
+    .indexpage #main-text {
+        padding: 9em 0px;
+        color: #000;
+    }
+    .indexpage #door-container {
+        position: absolute;
+        left: 50%;
+        width: 1px;
+        bottom: 239px;
+        margin-left: 290px;
+    }
+    .indexpage #history .image-history-1 {
+        width: 120px;
+    }
+    .indexpage #history .image-history-2 {
+        width: 270px;
+        margin-bottom: 0px;
+    }
+    .indexpage #dop-tovary .item {
+        margin-right: 1rem;
+    }
+    .indexpage #dop-tovary .item .image-container {
+        width: 110px;
+        padding-bottom: 72px;
+    }
+    .indexpage #dop-tovary .item .item-info {
+        width: 210px;
+    }
+}
+@media (min-width: 1200px) {
+    .indexpage #history .image-history-1 {
+        width: 150px;
+    }
+    .indexpage #history .image-history-2 {
+        width: 330px;
+        margin-bottom: 0px;
+    }
+}
