@@ -1,0 +1,27 @@
+#main {
+    background-image: url("/assets/images/bgblur.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+}
+.mb-5.about {
+    background-image: url("/assets/images/texture.jpg") !important;
+    overflow: hidden;
+}
+#main .bg-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+p.line-height {
+    line-height: 1.2;
+}
+#places p {
+    line-height: 1.1rem;
+    margin-bottom: 8px;
+}
+#places a {
+    color: #000;
+}

@@ -1,0 +1,117 @@
+p.line-height {
+    line-height: 2.2rem;
+}
+#main {
+    background-image: url("/assets/images/texture.jpg");
+    overflow: hidden;
+}
+
+#main .container {
+    overflow: visible;
+}
+#main .bg-elements img {
+    width: 300px;
+    margin-bottom: -100px;
+}
+#team {
+    background-color: #ebebeb;
+}
+#team .hover-animation-container {
+    overflow: hidden;
+    position: relative;
+}
+#team .hover-animation-container:hover .hover-animation {
+    border-radius: 0%;
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+#team .hover-animation-container:hover .hover-animation .bg-black {
+    top: 60px;
+    opacity: 1;
+}
+#team .hover-animation {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all 150ms ease-in;
+    -moz-transition: all 150ms ease-in;
+    -ms-transition: all 150ms ease-in;
+    -o-transition: all 150ms ease-in;
+    transition: all 150ms ease-in;
+}
+#team .hover-animation .bg-black {
+    background: #000;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    -webkit-transition: all 150ms 150ms ease-in;
+    -moz-transition: all 150ms 150ms ease-in;
+    -ms-transition: all 150ms 150ms ease-in;
+    -o-transition: all 150ms 150ms ease-in;
+    transition: all 150ms 150ms ease-in;
+}
+#team .hover-animation .bg-black a {
+    color: #fff;
+}
+@media (min-width: 768px) {
+    #main .bg-elements {
+        height: 320px;
+        margin-bottom: -80px;
+    }
+    #main .bg-elements img.d-left {
+        position: absolute;
+        left: -100px;
+    }
+    #main .bg-elements img.d-right {
+        position: absolute;
+        right: -100px;
+    }
+    #main .bg-elements img.h-middle {
+        position: absolute;
+        left: 0px;
+        right: -60px;
+        margin: auto;
+        width: 240px;
+    }
+}
+@media (min-width: 992px) {
+    #main .bg-elements {
+        height: 320px;
+    }
+    #main .bg-elements img.d-left {
+        position: absolute;
+        left: -100px;
+        width: 360px;
+    }
+    #main .bg-elements img.d-right {
+        position: absolute;
+        right: -100px;
+        width: 360px;
+    }
+    #main .bg-elements img.h-middle {
+        position: absolute;
+        left: 0px;
+        right: -60px;
+        margin: auto;
+    }
+}

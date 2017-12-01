@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
 import { BindHtmlPipe } from './toolbox/pipes/bind-html.pipe';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { LocationPageComponent } from './location-page/location-page.component';
+import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { BindHtmlPipe } from './toolbox/pipes/bind-html.pipe';
     FooterComponent,
     HomePageComponent,
     HeaderComponent,
-    BindHtmlPipe
+    BindHtmlPipe,
+    AboutPageComponent,
+    LocationPageComponent,
+    CatalogPageComponent
   ],
   imports: [
     AppRoutingModule,

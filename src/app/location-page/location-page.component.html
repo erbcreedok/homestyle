@@ -1,0 +1,62 @@
+<section id="main" class="mb-5 pt-5">
+  <div class="bg-shadow"></div>
+  <div class="container white text-center mb-5 py-5">
+    <div class="row my-5">
+      <div class="col-12 my-5" id="main-text">
+        <h1 class="upper mb-3">Где купить</h1>
+        <p class="big line-height">Доставка и замер в точках по Казахстану и России</p>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="mt-5 py-3">
+  <div class="container">
+    <div class="col-md-12 mx-auto">
+      <div class="row justify-content-around">
+        <h2 class="text-center smaller">Найдите магазин на карте</h2>
+      </div>
+      <div class="row my-2">
+        <div class="col-md-4">
+          <select class="input-group input-group-alt">
+            <option selected="">Казахстан</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <select class="input-group input-group-alt" onchange="switchMapTo(event.target.value)">
+            <option selected="" value="Almaty">Алматы</option>
+            <option value="Astana">Астана</option>
+            <option value="Karagandy">Караганды</option>
+            <option value="Shymkent">Шымкент</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <button class="input-group-btn btn btn-primary w-100">Найти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="ymap" style="width: 100%; height: 400px;margin-top: 30px;"></div>
+</section>
+
+
+<section id="places">
+  <div class="container">
+    <div class="col-12 my-5">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="brown mb-4">City Name</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Shop header</h5>
+          <p class="regular col-md-7 px-0 gray">Shop address</p>
+          <p class="regular"><a href="tel: +77076060070">+77076060070</a></p>
+          <p class="regular"><a href="tel: +77016060070">+77016060070</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

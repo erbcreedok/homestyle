@@ -63,8 +63,9 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand float-left" href="#">
-        <img src="assets/images/logo.png" alt="logo" class="d-none d-lg-block" height="30px">
-        <img src="assets/images/logo-white.png" alt="logo" class="d-block d-lg-none" height="30px">
+        <img *ngIf="!isWhiteLogo" src="assets/images/logo.png" alt="logo" class="d-none d-lg-block" height="30px">
+        <img *ngIf="!isWhiteLogo" src="assets/images/logo-white.png" alt="logo" class="d-block d-lg-none" height="30px">
+        <img *ngIf="isWhiteLogo" src="assets/images/logo-white.png" alt="logo" class="d-block" height="30px">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
@@ -73,17 +74,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" >
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link active">Главная страница</a>
+            <a routerLink="/main" routerLinkActive="active" class="nav-link">Главная страница</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">О компании</a>
+            <a routerLink="/about" routerLinkActive="active" class="nav-link">О компании</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link ">Каталог</a>
+            <a routerLink="/catalog" routerLinkActive="active" class="nav-link ">Каталог</a>
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">Где купить</a>
+            <a routerLink="/location" routerLinkActive="active" class="nav-link">Где купить</a>
           </li>
 
         </ul>
