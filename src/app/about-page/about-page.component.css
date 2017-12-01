@@ -2,7 +2,6 @@ p.line-height {
     line-height: 2.2rem;
 }
 #main {
-    background-image: url("/assets/images/texture.jpg");
     overflow: hidden;
 }
 

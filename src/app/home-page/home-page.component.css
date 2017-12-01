@@ -4,7 +4,6 @@
 }
 
 .indexpage #main {
-    background-image: url('/assets/images/lowbg.jpg');
     background-size: cover;
     overflow: hidden;
     height: 110vh;
@@ -105,7 +104,6 @@
     vertical-align: bottom;
 }
 .indexpage #catalog {
-    background-image: url("/assets/images/texture.jpg");
     color: #fff;
     padding: 60px 0px;
     -webkit-box-shadow: inset 0 -60px 30px -30px #fff;
@@ -220,7 +218,6 @@
     color: #b88d5a;
 }
 .indexpage #information {
-    background-image: url("/assets/images/bgblur.jpg");
     background-size: cover;
     background-position: center;
     -webkit-box-shadow: inset 0 -60px 30px -30px #fff, inset 0 60px 30px -30px #fff;
@@ -293,7 +290,6 @@
 @media (min-width: 992px) {
     .indexpage #main {
         height: 725px;
-        background-image: url("/assets/images/bg.jpg");
         background-size: auto 725px;
         background-position-x: center;
         position: relative;

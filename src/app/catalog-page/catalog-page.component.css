@@ -1,11 +1,10 @@
 #main {
-    background-image: url("/assets/images/bgblur.jpg");
     background-position: center;
     background-size: cover;
     z-index: 10;
 }
 .mb-5.about {
-    background-image: url("/assets/images/texture.jpg") !important;
+    background-image: url("/assets/images/texture.jpg");
     overflow: hidden;
 }
 #main .bg-shadow {
