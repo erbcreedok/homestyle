@@ -66,7 +66,7 @@
     <div class="row mt-5" id="catalog-list">
 
       <div *ngFor="let door of visibleDoors; let i = index" class="col-md-3 col-sm-6 mt-2 mb-5 door">
-        <div class="image-container mx-auto shadow" [ngStyle]="{backgroundImage: 'url(https://home-style-production.s3.amazonaws.com/public/avatars/' + door.id + '/original_' + door.main_image_file_name + ')'}" style="height: 341px; width: 144px;"></div>
+        <div class="image-container mx-auto shadow" [ngStyle]="{backgroundImage: 'url(https://home-style-production.s3.amazonaws.com/public/avatars/' + door.id + '/original_' + door.main_image_file_name + '), url(\'assets/images/door-template.svg\')'}" style="height: 341px; width: 144px;"></div>
         <br>
         <p class="high text-center">Дверь {{ door.title }}</p>
       </div>
