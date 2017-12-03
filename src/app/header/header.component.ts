@@ -10,12 +10,11 @@ export class HeaderComponent implements OnInit {
 
   onWhiteLogo = ['location', 'catalog'];
   isWhiteLogo: boolean = false;
-  constructor(private route: ActivatedRoute,
-              private router: Router) {
+  constructor(private router: Router) {
     this.router.events.subscribe(
         (event) => {
           if (event instanceof NavigationEnd) {
-            this.isWhiteLogo = this.onWhiteLogo.indexOf(event.urlAfterRedirects.slice(1)) !== -1;
+            this.isWhiteLogo = this.onWhiteLogo.indexOf(event.urlAfterRedirects.slice(1).split('?')[0]) !== -1;
           }
         }
     );
@@ -25,6 +24,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 }

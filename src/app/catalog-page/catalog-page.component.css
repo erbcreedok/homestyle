@@ -84,3 +84,6 @@ p.line-height {
     color: white;
     display: inline-block;
 }
+.subcategory-button.active {
+    background: #906d43;
+}
