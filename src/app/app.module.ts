@@ -16,6 +16,9 @@ import {DataStorageService} from './shared/data-storage.service';
 import {DoorsService} from './shared/door/doors.service';
 import {SubcategoriesService} from './shared/subcategory/subcategories.service';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
+import { YaCoreModule }  from 'angular2-yandex-maps';
+import {ShopsService} from "./shared/shop/shops.service";
+import {CitiesService} from "./shared/city/cities.service";
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    YaCoreModule.forRoot()
   ],
   providers: [
     DataStorageService,
     DoorsService,
-    SubcategoriesService
+    SubcategoriesService,
+    ShopsService,
+    CitiesService
   ],
   bootstrap: [AppComponent]
 })

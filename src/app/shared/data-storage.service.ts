@@ -3,6 +3,8 @@ import {Http, Response} from '@angular/http';
 import 'rxjs/Rx';
 import {Door} from "app/shared/door/door.model";
 import {Subcategory} from "./subcategory/subcategory.model";
+import {City} from "./city/city.model";
+import {Shop} from "./shop/shop.model";
 
 @Injectable()
 export class DataStorageService {
@@ -23,4 +25,20 @@ export class DataStorageService {
           }
       );
   }
+
+  loadCities() {
+      return this.http.get('https://homestyle-e3b26.firebaseio.com/cities.json').map(
+          (response: Response) : City[] => {
+              return response.json();
+          }
+      );
+  }
+
+  loadShops() {
+      return this.http.get('https://homestyle-e3b26.firebaseio.com/shops.json').map(
+          (response: Response) : Shop[] => {
+              return response.json();
+          }
+      );
+    }
 }

@@ -17,7 +17,7 @@ export class SubcategoriesService {
     return (this.subscription && !this.subscription.closed);
   }
 
-  loadSubcategories(subcategories: Subcategory[]) {
+  loadSubcategories() {
     this.subscription = this.dataStorageService.loadSubcategories().subscribe(
         (subcategories: Subcategory[]) => {
           this.subcategories = subcategories;

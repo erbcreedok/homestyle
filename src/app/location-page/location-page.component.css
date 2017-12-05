@@ -23,3 +23,8 @@ p.line-height {
 #places a {
     color: #000;
 }
+.map-container-inner
+{
+    width: 100% ;
+    height: 100%;
+}

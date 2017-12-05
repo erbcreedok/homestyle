@@ -192,21 +192,132 @@
           <div class="col-md-5 white">
             <div class="row">
               <div class="map-container px-0 col-12">
-                <!--<iframe frameborder="no" style="border: 1px solid #a3a3a3; box-sizing: border-box; margin: 0;" width="100%" height="300" src="http://widgets.2gis.com/widget?type=firmsonmap&amp;options=%7B%22pos%22%3A%7B%22lat%22%3A43.236167694554204%2C%22lon%22%3A76.84642553329469%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22almaty%22%7D%2C%22org%22%3A%229429940000785575%22%7D"></iframe>-->
+                <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+                <script type="text/javascript">
 
-                <div id="map" style="
-                width:100%; height: 190px; border:0; background: #444"></div>
-                <!--                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.677469400906!2d76.84312341537633!3d43.23722147913783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369c12e62874d%3A0x74a5c96297264d8a!2z0KLQtdGF0L3QvtC00L7QvCDQkNGA0LzQsNC00LA!5e0!3m2!1sru!2s!4v1507977237004" width="100%" height="190" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                    selectedCity = 'Almaty';
+
+                    cities = {
+                        Almaty: {
+                            points: [
+                                {
+                                    location: [43.279465, 76.917716],
+                                    hintContent: 'улица Казыбаева, 44',
+                                    balloonContent: 'Магазин дверей, +77076060070, улица Казыбаева, 44'
+                                },
+                                {
+                                    location: [43.236363, 76.845782],
+                                    hintContent: 'ул. Кабдолова 1/8',
+                                    balloonContent: 'ТК "ARMADA" 1 блок, 106 бутик, +77076060070'
+                                },
+                                {
+                                    location: [43.280027, 76.888573],
+                                    hintContent: 'пр-т Рыскулова 103',
+                                    balloonContent: 'ТЦ "Строй Сити" бутик 80 "Г"'
+                                },
+                                {
+                                    location: [43.242653, 76.890521],
+                                    hintContent: 'ул. Розыбакиева 72',
+                                    balloonContent: 'ТЦ "Саламат-3" 41 бутик'
+                                }
+                            ],
+                            center: [43.257839, 76.878916],
+                            zoom: 11
+                        },
+                        Astana: {
+                            points:[
+                                {
+                                    location: [51.121989, 71.422180],
+                                    hintContent: 'ТЦ Комфорт, ул.Сауран, 8',
+                                    balloonContent: 'ТЦ Комфорт, ул.Сауран, 8, 2 этаж'
+                                },
+                                {
+                                    location: [51.161630, 71.457846],
+                                    hintContent: 'ул. Иманова, 41',
+                                    balloonContent: 'ул. Иманова, 41'
+                                },
+                                {
+                                    location: [51.174597, 71.392655],
+                                    hintContent: 'пр-т Богенбай Батыра, 6/5',
+                                    balloonContent: 'Строительный рынок Эталон,пр-т Богенбай Батыра, 6/5 (1 этаж)'
+                                },
+                                {
+                                    location: [51.189886, 71.457918],
+                                    hintContent: 'шоссе Алаш, 20А',
+                                    balloonContent: '12 месяцев, ш.Алаш, 20А, 2 этаж, 32 бутик'
+                                },
+                                {
+                                    location: [51.173174, 71.392197],
+                                    hintContent: '1-я Алматинская улица, 41А',
+                                    balloonContent: 'Строительный рынок Эталон, ул.Алматинская 1-ая, 41/2 (1 этаж, 2 этаж 25 бутик)'
+                                }
+                            ],
+                            center: [51.148433, 71.430546],
+                            zoom: 10
+                        },
+                        Karaganda: {
+                            points:[
+                                {
+                                    location: [49.795257, 73.130321],
+                                    hintContent: 'Строймарт, 137 учетный квартал 039 строение, бутик 1Д',
+                                    balloonContent: 'Строймарт, 137 учетный квартал 039 строение, бутик 1Д'
+                                }
+
+                            ],
+                            center: [49.806406, 73.085485],
+                            zoom: 10
+                        },
+                        Shymkent: {
+                            points:[
+                                {
+                                    location: [42.336925, 69.579846],
+                                    hintContent: 'пр-т Байдибек-би 91',
+                                    balloonContent: 'пр-т Байдибек-би 91'
+                                }
+
+                            ],
+                            center: [42.315514, 69.586907],
+                            zoom: 10
+                        }
+                    };
+
+                    function drawMap() {
+                        myMap.setCenter(cities[selectedCity].center);
+                        myMap.setZoom(cities[selectedCity].zoom);
+
+                        myMap.geoObjects.removeAll();
+                        cities[selectedCity].points.forEach(function(point) {
+                            myMap.geoObjects.add(new ymaps.Placemark(point.location, {
+                                hintContent: point.hintContent,
+                                balloonContent: point.balloonContent
+                            }));
+                        });
+                    }
+
+                    function switchMapTo(city) {
+                        selectedCity = city;
+                        drawMap();
+                    }
+
+                    ymaps.ready(function () {
+                        myMap = new ymaps.Map('map', {center: [0,0], zoom: 0});
+                        drawMap();
+                    });
+                </script>
+                <div id="map" style="width:100%; height: 190px; border:0; background: #444">
+                  <ya-map [latitude]="cities[selectedCity].center[0]" [longitude]="cities[selectedCity].center[1]" [zoom]="cities[selectedCity].zoom">
+                    <ya-marker *ngFor="let point of cities[selectedCity].points" [latitude]="point.location[0]" [longitude]="point.location[1]" [balloonContentBody]=[point.balloonContent]></ya-marker>
+                  </ya-map>
+                </div>
               </div>
               <div class="contacts text-center pt-3 pb-2 px-0 col-12">
                 <h4>Контакты</h4>
                 <p class="cursive mb-4">Мы всегда на связи</p>
                 <div class="row justify-content-center p-3">
-                  <span onclick="switchMapTo('Almaty')" class="btn btn-primary mx-2 my-2 d-block small float-left">Алматы</span>
-                  <br>
-                  <span onclick="switchMapTo('Astana')" class="btn btn-primary mx-2 my-2 d-block small float-left">Астана</span>
-                  <span onclick="switchMapTo('Karaganda')" class="btn btn-primary mx-2 my-2 d-block small float-left">Караганда</span>
-                  <span onclick="switchMapTo('Shymkent')" class="btn btn-primary mx-2 my-2 d-block small float-left">Шымкент</span>
+                  <span (click)="selectedCity = 'Almaty'" class="btn btn-primary mx-2 my-2 d-block small float-left">Алматы</span>
+                  <span (click)="selectedCity = 'Astana'" class="btn btn-primary mx-2 my-2 d-block small float-left">Астана</span>
+                  <span (click)="selectedCity = 'Karagandy'" class="btn btn-primary mx-2 my-2 d-block small float-left">Караганда</span>
+                  <span (click)="selectedCity = 'Shymkent'" class="btn btn-primary mx-2 my-2 d-block small float-left">Шымкент</span>
                 </div>
               </div>
               <div class="contacts text-center contacts-phone px-0 col-12">
